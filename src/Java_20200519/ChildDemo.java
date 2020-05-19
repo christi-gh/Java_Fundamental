@@ -1,0 +1,25 @@
+package Java_20200519;
+
+public class ChildDemo {
+	public static void main(String[] args) {
+		Parents p = new Parents();
+		p.money = 1_000_000_000;
+		p.makeMoney();
+		p.play("baduk");
+
+		System.out.println(p.money);
+
+		Child c = new Child();
+		c.money = 1_000_000_000;
+		c.setParentsMoney(1_000_000);
+		c.chicken = "교촌통닭";
+		c.gotoSchool();
+		c.makeMoney();
+		c.play("omok");
+
+		System.out.println(c.money);
+		System.out.println(c.getParentsMoney());
+		System.out.println(c.chicken);
+
+	}
+}
