@@ -1,4 +1,4 @@
-package Java_2020522;
+package Java_20200522;
 
 public class Customer {
 	@Override

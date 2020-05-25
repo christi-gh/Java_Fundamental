@@ -1,4 +1,4 @@
-package Java_2020522;
+package Java_20200522;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -70,33 +70,53 @@ public class MemberManagementDemo {
 
 	// 1. 수정할 아이디를 입력받는다.
 	// 2. ArrayList에 있는 고객정보에서 수정할 아이디를 찾아서 있으면 수정할 이름을 입력받고,
-	//    ArrayList의 고객정보를 수정한다. 만약, 수정할 아이디가 없으면 "수정할 아이디가 없습니다."
-	//    메세지를 출력한다.
-	//3. ArrayList에 있는 모든 고객을 출력한다.
-	//4. print() 메서드 호출
-	//5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 한다.
+	// ArrayList의 고객정보를 수정한다. 만약, 수정할 아이디가 없으면 "수정할 아이디가 없습니다."
+	// 메세지를 출력한다.
+	// 3. ArrayList에 있는 모든 고객을 출력한다.
+	// 4. print() 메서드 호출
+	// 5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 한다.
 	public void update 	{
-
+		String id = input("아이디>");
+		String name = input("이름>");
+		
+		Member m = new Member(id, name);
+		m.indexOf();
+		
+		for(Member id : list) {
+			System.out.println("");
+		}
+			
+		print();
+		String search = input("번호를 선택하세요>");
+		run(search);
+		
+		print();
+		String update = input("업데이트할 이름을 입력하세요");
+		
+		
+		//indexOf
 	}
-	
-	//1. 삭제할 아이디를 입력받는다.
-	//2. ArrayList의 Member 객체 중에서 삭제할 아이디를 찾아 있으면 삭제하고, 없으면 
-	//   "삭제할 아이디가 없습니다." 메세지를 출력한다. 
-	//3. ArrayList에 있는 모든 고객을 출력한다.
-	//4. print() 메서드 호출
-	//5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 한다.
+
+	// 1. 삭제할 아이디를 입력받는다.
+	// 2. ArrayList의 Member 객체 중에서 삭제할 아이디를 찾아 있으면 삭제하고, 없으면
+	// "삭제할 아이디가 없습니다." 메세지를 출력한다.
+	// 3. ArrayList에 있는 모든 고객을 출력한다.
+	// 4. print() 메서드 호출
+	// 5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 한다.
 	public void delete 	{
-		
+		String id = input("아이디>");
+
 	}
 
-	//1. 검색할 아이디를 입력받는다.
-	//2. ArrayList에 Member 객체 중에서 검색할 아이디를 찾아서 있으면 출력하고, 없으면
-	//	 "검색된 결과가 없습니다." 메세지 출력
-	//3. ArrayList에 있는 모든 고객을 출력한다.
-	//4. print() 메서드 호출
-	//5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 한다.
+	// 1. 검색할 아이디를 입력받는다.
+	// 2. ArrayList에 Member 객체 중에서 검색할 아이디를 찾아서 있으면 출력하고, 없으면
+	// "검색된 결과가 없습니다." 메세지 출력
+	// 3. ArrayList에 있는 모든 고객을 출력한다.
+	// 4. print() 메서드 호출
+	// 5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 한다.
 	public void search 	{
-		
+		String id = input("아이디>");
+
 	}
 
 	public static void main(String[] args) {
