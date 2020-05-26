@@ -35,6 +35,5 @@ public class FileInputOutputStreamDemo2 {
 				e.printStackTrace();
 			}			
 		}
-
 	}
 }
