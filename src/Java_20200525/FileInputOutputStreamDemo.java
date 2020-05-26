@@ -11,8 +11,8 @@ public class FileInputOutputStreamDemo {
 		FileOutputStream fos = null;
 
 		try {
-			fis = new FileInputStream("C:\\dev\\jdk-11.0.7_windows-x64_bin.exe");
-			fos = new FileOutputStream("C:\\dev\\jdk.exe");
+			fis = new FileInputStream("C:\\dev\\jdk-11.0.7_windows-x64_bin.exe"); // 소스 : 읽을 대상 / binary file
+			fos = new FileOutputStream("C:\\dev\\jdk.exe"); // 출력 대상
 
 			// 이 코드를 꼭 외워야한다. '1바이트 읽고 1바이트 출력하시오'
 			int readByte = 0;
