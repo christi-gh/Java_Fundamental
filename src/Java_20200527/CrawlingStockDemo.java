@@ -35,8 +35,6 @@ public class CrawlingStockDemo {
 			String low = trElement.child(5).text();
 			String volume = trElement.child(6).text();
 			System.out.println(date+"\t"+close+"\t"+dayBeforeRatio+"\t"+open+"\t"+high+"\t"+low+"\t"+volume+"\n");
-			
 		}
 	} 
-
 }
