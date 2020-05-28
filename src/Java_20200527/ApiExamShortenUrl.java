@@ -13,8 +13,8 @@ import java.util.Map;
 public class ApiExamShortenUrl {
 
     public static void main(String[] args) {
-        String clientId = "Z83Pv_f7QvVv96RrERfU"; //애플리케이션 클라이언트 아이디값"
-        String clientSecret = "Du7ZR58yd3"; //애플리케이션 클라이언트 시크릿값"
+        String clientId = "Z83Pv_f7QvVv96RrERf"; //애플리케이션 클라이언트 아이디값"
+        String clientSecret = "Du7ZR58yd"; //애플리케이션 클라이언트 시크릿값"
 
         String originalURL = "https://developers.naver.com/notice";
         String apiURL = "https://openapi.naver.com/v1/util/shorturl?url=" + originalURL;
