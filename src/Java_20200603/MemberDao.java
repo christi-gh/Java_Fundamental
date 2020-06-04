@@ -10,15 +10,17 @@ import java.util.ArrayList;
 // member 테이블을 접근하기 위한 클래스
 // DAO : Data Access Object
 public class MemberDao {
-	public int insert(MemberDto m) {
-		int resultCount = 0;
-
+	
+	public MemberDao() {
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-
+	}
+	public int insert(MemberDto m) {
+		int resultCount = 0;
+		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 
@@ -49,18 +51,12 @@ public class MemberDao {
 				e.printStackTrace();
 			}
 		}
-
 		return resultCount;
 	}
 
 	public int update(MemberDto m) {
 		int resultCount = 0;
-
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 
@@ -100,12 +96,6 @@ public class MemberDao {
 	public int delete(int num) {
 		int resultCount = 0;
 
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-
 		Connection con = null;
 		PreparedStatement pstmt = null;
 
@@ -140,12 +130,6 @@ public class MemberDao {
 	public ArrayList<MemberDto> select() {
 		ArrayList<MemberDto> list = new ArrayList<MemberDto>();
 		
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -176,28 +160,13 @@ public class MemberDao {
 				if(con != null)con.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
-			}  finally {
-				try {
-					if (pstmt != null)
-						pstmt.close();
-					if (con != null)
-						con.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
+			}  
 		}
 		return list;
 	}
 	
 	public MemberDto select(int num) {
 		MemberDto mdto = null;
-		
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
